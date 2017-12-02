@@ -27,3 +27,25 @@ This especially should not be used or served on the internet, or in any publicly
 
 See also:
  - [Habitus](http://www.habitus.io/)
+
+## How to use
+
+Pull and run docker image:
+
+    docker run -d -p 80:80 outstack/keypad
+    
+Add configuration or secrets. This could come from your CI environment (e.g. [Gitlab Secret Variables](https://docs.gitlab.com/ce/ci/variables/README.html#secret-variables))
+
+    curl --fail -X PUT http://127.0.0.1:80/secret/key -d "new secret"
+
+Access new key
+
+    curl --fail --silent -X GET http://127.0.0.1:80/secret/key
+
+To access these keys from a `docker build` you will need to pass in the host/IP of the keypad server
+as it would be available from inside the docker build process. E.g. `--build-arg KEYPAD=IP_ACCESSIBLE_TO_BUILD` .
+
+This is currently the most tricky part of the setup and a little long-winded right now. See [./example](./example) for
+and example, currently running on Travis in this repository.
+
+

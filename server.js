@@ -33,4 +33,11 @@ app.put(/.*/, (req, res) => {
     return;
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(80, () => {
+    console.log('Keypad listening on port 80!');
+    console.log('');
+    console.log('  Usage (replace IP/PORT as required) ');
+    console.log('');
+    console.log('  curl --silent --fail -X PUT http://127.0.0.1:80/secret/key -d "new secret"');
+    console.log('  curl --silent --fail -X GET http://127.0.0.1:80/secret/key');
+});
