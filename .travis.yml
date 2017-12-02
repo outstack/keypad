@@ -5,4 +5,4 @@ jobs:
   include:
     - stage: test
       install: docker build -t outstack/keypad .
-      script: cd ./example && /example.sh
+      script: cd ./example && ./example.sh
