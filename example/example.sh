@@ -3,9 +3,9 @@ set -e
 
 # For repeatedly running this script, you will need to cleanup from the previous run.
 # This probably wouldn't be needed in CI
-docker stop keypad
-docker rm keypad
-docker network remove keypad
+# docker stop keypad
+# docker rm keypad
+# docker network remove keypad
 
 # Create a docker network and get its gateway IP
 docker network create keypad
