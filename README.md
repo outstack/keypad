@@ -27,6 +27,7 @@ This especially should not be used or served on the internet, or in any publicly
 
 See also:
  - [Habitus](http://www.habitus.io/)
+ - [A DIY version of this](https://farazdagi.com/2016/using-ssh-private-keys-securely-when-building-docker-images/)
 
 ## How to use
 
