@@ -1,5 +1,9 @@
 # OutStack Keypad
 
+## Important. Read this first
+
+Docker 18.09 introduces a much cleaner, natively supported way of achieving the same results which you should probably use instead. See https://medium.com/@tonistiigi/build-secrets-and-ssh-forwarding-in-docker-18-09-ae8161d066 for details. This repository will likely be archived and eventually deleted.
+
 ## What is it? 
 
 Keypad is a tiny HTTP-enabled NodeJS server for exposing application configuration (especially secrets) to application build processes.
